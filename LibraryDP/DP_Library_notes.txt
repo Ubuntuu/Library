@@ -1,0 +1,42 @@
+Bibliotek
+
+1. Register user (tight coupling?)
+   - Student
+   - Teacher
+   - Other
+   - Name
+   - Password
+   * CreateUser()
+  
+
+2. Login
+   - Name
+   - Password
+   * Login()
+   * LogOut() ?
+
+3. Overview (Factory?)
+   - All books
+   - Filter (availability)
+   * Books()
+   * GetBook()
+   * GetAllBooks()
+   
+4. Loan books
+   - Max one of same ISBN 
+   * LoanBook()
+   * MaxOneISBN()
+   * GetSelectedBook() ?
+
+5. Return loaned book
+   * ReturnBook()
+ 
+
+6. Log (Singleton, null object?)
+   - Log all events 
+      - loans
+      - returns
+      - created user
+      * LogLoan()
+      * LogReturn()
+      * LogCreatedUser()
