@@ -1,6 +1,6 @@
 Bibliotek
 
-1. Register user (tight coupling?)
+1. Register user (tight coupling? user = interface)
    - Student
    - Teacher
    - Other
@@ -40,3 +40,17 @@ Bibliotek
       * LogLoan()
       * LogReturn()
       * LogCreatedUser()
+
+
+
+Controllers:
+Home ok
+Login
+Loan
+
+
+Views:
+Login
+Overview (Index?)
+LoanBook
+Log / terminal?
