@@ -12,7 +12,6 @@ namespace LibraryDP
 {
     public class Program
     {
-        // Hej
         public static void Main(string[] args)
         {
             CreateWebHostBuilder(args).Build().Run();
