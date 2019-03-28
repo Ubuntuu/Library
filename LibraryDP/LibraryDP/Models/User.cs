@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Identity;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -10,18 +12,40 @@ namespace LibraryDP.Models
     /// </summary>
     public class User
     {
-        string username { get; set; }
-        string password { get; set; }
+        public int? Id { get; set; }
+        public string Username { get; set; }
+        public string Password { get; set; }
+
 
         /// <summary>
         /// Constructor for user object.
         /// </summary>
         /// <param name="inputUsername"></param>
         /// <param name="inputPassword"></param>
-        public User(string inputUsername, string inputPassword)
+
+        public User(int userId, string inputUsername, string inputPassword)
         {
-            username = inputUsername;
-            password = inputPassword;
+            Id = userId;
+            Username = inputUsername;
+            Password = inputPassword;
+        }
+
+
+        public class CreateUserModel
+        {
+            [Required]
+            [Key]
+            public int Id { get; set; }
+            [Required]
+            public string Name { get; set; }
+            [Required]
+            public string Email { get; set; }
+            [Required]
+            public string Username { get; set; }
+            [Required]
+            [DataType(DataType.Password)]
+            public string Password { get; set; }
+
         }
     }
 }
